@@ -1,0 +1,51 @@
+.card {
+  border: 2px solid black;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px black;
+  padding: 2%;
+  margin: 1%;
+  max-width: 250px;
+  display: inline-block;
+}
+.card .profilepic {
+  max-width: 50%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 1%;
+}
+.author {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 0;
+  color: orangered;
+
+}
+.description {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: yellowgreen;
+  
+}
+
+.student {
+  font-family: gabriola;
+  font-size: larger;
+  font-weight: bolder;
+  border-bottom: 2px solid whitesmoke;
+  border-top: 2px solid whitesmoke;
+  margin-top: 5px;
+}
+.student p {
+  margin: 0;
+}
+
+.msg {
+  background-color: greenyellow;
+}
+
+.logo {
+  background-color: burlywood;
+  padding: 5px;
+
+}
+.logo .name {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
