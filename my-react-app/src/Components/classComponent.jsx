@@ -7,4 +7,4 @@ class classCompponent extends React.Component{
     }
 }
 
-//export default classCompponent
+// export default classCompponent
