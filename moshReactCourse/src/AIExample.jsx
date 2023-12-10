@@ -1,32 +1,55 @@
-import React, { useState } from 'react';
+import React, { useReducer,useState } from 'react';
+import Todo from './todo.jsx';
 
-function AiExample() {
-    const [numbers, setNumbers]=React.useState([]);
-    const [result, setResult]=React.useState('');
+export const ACTIONS = {
+   ADD_TODO:'new_todo',
+   TOGGLE_TODO: 'toggle_todo',
+   DELETE: 'delete'
+}
 
-    function handleNumberInput(e){
-        const getInputVal = e.target.value;
-        setNumbers([...numbers, Number(getInputVal)])
-    };
-    function handleOperation(operation){
-        let operationResult;
-
-        switch(operation){
-            case '+':
-                operationResult = numbers.reduce((acc, curr)=>acc+curr,0);
-                break;
-                default:
-                return;
-        }
-        setResult(operationResult);
-        setNumbers([])
+function reducer(todos, action){
+    switch(action.type){
+        case ACTIONS.ADD_TODO:
+            return [...todos, newTodo(action.payload.name)];
+            break;
+        case ACTIONS.TOGGLE_TODO:
+            return todos.map((todo)=>{
+                if(todo.id === action.payload.id){
+                    return { ...todo, complete: !todo.complete }
+                }
+                return todo;
+            })
+            break;
+        case ACTIONS.DELETE:
+            return todos.filter(todo => todo.id !== action.payload.id)
     }
+}
+
+function newTodo(name){
+    return { id: Date.now(), name: name, complete: false }
+}
+
+function AIExample() {
+    const [todos, dispatch] = useReducer(reducer, []);
+    const [ name, setName ] = useState('')
+
+    function handleSubmit(e){
+        e.preventDefault()
+        dispatch({ type: ACTIONS.ADD_TODO, payload: { name: name } })
+        setName('')
+    }
+    console.log(todos)
     return ( 
         <div>
-            <input type="number" name="number" id="number" onChange={handleNumberInput} />
-            <button value='+' onClick={handleOperation}>+</button>
+            <form onSubmit={handleSubmit}>
+                <label htmlFor="todo">Todo</label>
+                <input type="text" id='todo' value={name} onChange={(e)=> setName(e.target.value)} />
+                <input type="submit" value="Submit" />
+            </form>
+            {todos.map((todo)=> 
+            {return <Todo key={todo.id} todo={todo} dispatch={dispatch} />})} 
         </div>
      );
 }
 
-export default AiExample;
+export default AIExample;

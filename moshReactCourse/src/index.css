@@ -63,12 +63,14 @@ button:focus-visible {
 }
 
 .logo{
-  color:hsl(109, 74%, 68%);
+  color:hsla(109, 74%, 68%, 0.733);
 }
 .webpage {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  background-color: rgb(210, 238, 215);
+  background-color: rgb(199, 218, 187);
   color: #000000;
+  padding: 0 1em 0.5em 1em;
+  margin-bottom: -1em;
 }
 
 .footer {
@@ -176,9 +178,9 @@ textarea{
 }
 .calculator {
   width: 15em;
-  height: 22.8em;
+  height: 24.8em;
   border-radius: 5px;
-  background-color: #9595a3;
+  background-color: #ffffff;
 }
 .card, .calculator{
   margin: 1em;
@@ -186,13 +188,13 @@ textarea{
 .calcScreen{
  background-color: #0b0c0b;
  width: 13em;
- height: 5em;
+ height: 7em;
  margin-bottom: 5px;
 }
 .calcBody{
   width: 13em;
   height: 13em;
-  background-color: #d6d9e2;
+  background-color: #e2d9d6;
 
 }
 .bsContainer{
@@ -213,26 +215,18 @@ textarea{
 .button{
   width: 2.3em;
   margin-left: 3.5px;
+  cursor: pointer;
+  border: 1px solid green;
 }
 .button:hover{
-  background-color: #967777;
+  background-color: #9a73f4;
 }
 .mainbtns{
   color: #5a07e9;
 }
 .mainbtns:hover{
-  background-color: #967777;
+  background-color: #9a73f4;
   color:white
-}
-.off{
-  color: #eddbde;
-  border-radius: 50%;
-  width: 2em;
-  padding-left: 3px;
-  background-color: #480873;
-}
-.off:hover{
-  background-color: #381a85;
 }
 .topscreen{
   overflow: hidden;
@@ -243,16 +237,18 @@ textarea{
 .topscreen, .bottomscreen {
   background-color: #242424;
   width: 12.5em;
-  height: 2.4em;
+  height: 3.5em;
 
 }
 .topbottomScreen{
-  margin-left: 0.25em;
+  margin-left: 0.22em;
   position: absolute;
 }
 .calcOn{
   color: #fff;
   font-size: large;
+  display: flex;
+  flex-direction: column;
 }
 .topscreenLayOut{
   display: flex;
@@ -271,9 +267,28 @@ textarea{
   height: 2.4em;
   margin-bottom: 0.3em;
   margin-left: auto;
+  padding:2px
+  
 }
 .time{
   overflow:hidden;
   color:#e5fe08;
+  font-size: 100;
+}
+.todo {
+padding: 3px;}
+.prevOperand {
   font-size: small;
+  color: rgb(97, 201, 97)
+}
+.span2 {
+  height: 3.589em;
+  position: absolute;
+  background-color: #060944;
+  color: white;
+  border-radius: 4px;
+}
+.span2:hover{
+  background-color: #0b0f55;
+
 }

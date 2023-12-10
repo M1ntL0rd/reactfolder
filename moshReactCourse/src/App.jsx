@@ -3,7 +3,6 @@ import Form from './form.jsx';
 import './App.css'
 import Footer from './footer.jsx';
 import Calculator from './calculator.jsx';
-import AiExample from './AIExample.jsx';
 
 function App() {
 
@@ -12,7 +11,6 @@ function App() {
       <Pages />
       <Form /> 
       <Calculator />
-      <AiExample /> 
       <Footer />     
     </div>
   );
