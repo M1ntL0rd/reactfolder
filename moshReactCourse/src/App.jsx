@@ -11,6 +11,7 @@ function App() {
       <Pages />
       <Form /> 
       <Calculator />
+      <Calculator />
       <Footer />     
     </div>
   );

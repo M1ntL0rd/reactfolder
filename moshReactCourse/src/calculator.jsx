@@ -124,13 +124,14 @@ export const ACTIONS = {
    }
 
 const INTEGER_FORMATTER = new Intl.NumberFormat('en-us',{
-    maximumFractionDigits: 0
+    maximumFractionDigits: 0,
 })
 
 function numberFormatter(operand){
  if(operand == null) return
  const [ineteger, decimal] = operand.split('.')
- if(decimal == null){}
+ if(decimal == null) return INTEGER_FORMATTER.format(ineteger)
+ return `${INTEGER_FORMATTER.format(ineteger)}.${decimal}`
 }
 
 function Calculator() {
@@ -149,11 +150,11 @@ function Calculator() {
                         <div className="topbottomScreen">
                             <div className="topscreen">
                                     <div className='topscreenLayOut'>
-                                        <p className="calcOn"> <span className='prevOperand'>{prevOperand}</span> <span className="currOperand"> {operation} {currentOperand}</span></p>
+                                        <p className="calcOn"> <span className='prevOperand'>{numberFormatter(prevOperand)}</span> <span className="currOperand"> {operation} {numberFormatter(currentOperand)}</span></p>
                                     </div>
                             </div>
                             <div className="bottomscreen">
-                                    <p className="result">{result}</p>
+                                    <p className="result">{numberFormatter(result)}</p>
                             </div>
                         </div>                       
                     </div>

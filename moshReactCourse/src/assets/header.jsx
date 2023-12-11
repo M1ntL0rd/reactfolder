@@ -12,7 +12,7 @@ const [click, setClick]=React.useState(false);
 
     return ( 
         <div className="header">
-            <button type='button' className="navbarbtn openbtn" >↻</button>
+            <button type='button' className="navbarbtn openbtn" >≡</button>
             <div className="navbar">
                 <button type='button' className="navbarbtn closebtn" onClick={handleClick}>x</button>
                 <div className="atagContainer">
@@ -30,7 +30,7 @@ const [click, setClick]=React.useState(false);
                 {/* NavBar close button
                 <button type="button" className="navbarbtn closebtn">x</button>*/}
             </div>
-            <h1 className="h1"><span className="logo">∞ↅ∞</span> The ↅrace N∞k</h1>
+            <h1 className="h1"><span className="logo">∞ↅ∞</span> The ↅreen Page</h1>
 
         </div>
      );

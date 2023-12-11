@@ -81,15 +81,6 @@ button:focus-visible {
   text-align: center;
 }
 
-/*
-.ServiceConAbout{
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  place-content: center;
-  justify-content: space-evenly;
-  padding-right: -50px;
-}*/
 .hr{
   margin-top: 2em;
 }
@@ -180,7 +171,8 @@ textarea{
   width: 15em;
   height: 24.8em;
   border-radius: 5px;
-  background-color: #ffffff;
+  background-color: #f07f7f;
+  border: 1px solid rgba(139, 167, 149, 0.89)tim;
 }
 .card, .calculator{
   margin: 1em;
@@ -267,7 +259,7 @@ textarea{
   height: 2.4em;
   margin-bottom: 0.3em;
   margin-left: auto;
-  padding:2px
+  padding:1px
   
 }
 .time{
@@ -279,7 +271,7 @@ textarea{
 padding: 3px;}
 .prevOperand {
   font-size: small;
-  color: rgb(97, 201, 97)
+  color: rgb(0, 255, 0)
 }
 .span2 {
   height: 3.589em;
@@ -291,4 +283,7 @@ padding: 3px;}
 .span2:hover{
   background-color: #0b0f55;
 
+}
+.redCalculator{
+  background-color: red;
 }
