@@ -15,15 +15,20 @@ export const ACTIONS = {
     switch(type){
         case ACTIONS.ADD_DIGIT:
             if(state.overwrite){
-                return{
+                return{ 
                     ...state,
                     currentOperand: payload.digit,
                     overwrite: false
                 }}
                 
             
-            if(payload.digit === "0" && state.currentOperand === "0")return state
-            if(payload.digit === "." && state.currentOperand.includes('.'))return state
+            if(payload.digit === "0" && state.currentOperand === "0"){return state};
+            if(payload && typeof payload.digit === 'string' && state && typeof state.currentOperand === 'string'){
+                if(payload.digit === "." && state.currentOperand.includes('.')){
+                    return state;
+                }
+            }
+            
             return {
                 ...state,
                 currentOperand: `${state.currentOperand || ""}${payload.digit}`
@@ -128,7 +133,7 @@ const INTEGER_FORMATTER = new Intl.NumberFormat('en-us',{
 })
 
 function numberFormatter(operand){
- if(operand == null) return
+ if(operand == null) return;
  const [ineteger, decimal] = operand.split('.')
  if(decimal == null) return INTEGER_FORMATTER.format(ineteger)
  return `${INTEGER_FORMATTER.format(ineteger)}.${decimal}`

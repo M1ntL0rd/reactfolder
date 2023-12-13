@@ -10,6 +10,7 @@ export const ACTIONS = {
 function reducer(todos, action){
     switch(action.type){
         case ACTIONS.ADD_TODO:
+            if(action.payload.name == null && todos.name == null)  return
             return [...todos, newTodo(action.payload.name)];
             break;
         case ACTIONS.TOGGLE_TODO:
@@ -42,7 +43,7 @@ function AIExample() {
     return ( 
         <div>
             <form onSubmit={handleSubmit}>
-                <label htmlFor="todo">Todo</label>
+                <label htmlFor="todo">Todo: </label>
                 <input type="text" id='todo' value={name} onChange={(e)=> setName(e.target.value)} />
                 <input type="submit" value="Submit" />
             </form>

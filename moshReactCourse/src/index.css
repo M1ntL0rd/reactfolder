@@ -67,8 +67,8 @@ button:focus-visible {
 }
 .webpage {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  background-color: rgb(199, 218, 187);
-  color: #000000;
+  background-color: rgb(8, 106, 3);
+  color: #c8f5d6;
   padding: 0 1em 0.5em 1em;
   margin-bottom: -1em;
 }
@@ -171,8 +171,9 @@ textarea{
   width: 15em;
   height: 24.8em;
   border-radius: 5px;
-  background-color: #f07f7f;
-  border: 1px solid rgba(139, 167, 149, 0.89)tim;
+  background-color: hsl(0, 0%, 100%);
+  border: 1px solid rgba(222, 254, 233, 0.89);
+  box-shadow: -4px -4px 0px rgba(255, 255, 255, 0.774);
 }
 .card, .calculator{
   margin: 1em;
@@ -209,15 +210,17 @@ textarea{
   margin-left: 3.5px;
   cursor: pointer;
   border: 1px solid green;
+  background-color: #FFF;
+  border-radius: 10px;
 }
 .button:hover{
-  background-color: #9a73f4;
+  background-color: #017a01;
 }
 .mainbtns{
   color: #5a07e9;
 }
 .mainbtns:hover{
-  background-color: #9a73f4;
+  background-color: #017a01;
   color:white
 }
 .topscreen{
